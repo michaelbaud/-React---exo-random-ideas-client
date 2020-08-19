@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+
+:root {
+  --white-color: #fafafa;
+  --light-grey-color: #f7f4f4;
+  --light-grey-darken-color: #d4d3d3;
+  --blue-color: #4f78a4;
+  --dark-grey-color: #4b4949;
+}
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+body {
+  background-color: var(--light-grey-color);
+  font-size: 1rem;
+}
+.App {
+  margin: 0 8px;
+  width: 100%;
+  min-height: 95vh;
+  position: relative;
+}
+h1 {
+  color: var(--dark-grey-color);
+  text-align: center;
+  margin: 2rem 0;
+}
+li {
+  list-style: none;
+  color: var(--dark-grey-color);
+  line-height: 1.6rem;
+  margin: 1rem;
+}
+/* End General */
+
+
+/* Input */
+.box {
+  background-color: var(--white-color);
+  margin: auto;
+  max-width: 300px; 
+  padding: 30px 30px 7px 30px;  
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.box input {
+  padding: 10px 0;
+  margin-bottom: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--blue-color);
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: var(--blue-color);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.box form div {
+  position: relative;
+} 
+.box form div label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: var(--blue-color);
+  transition: 0.5s;
+  pointer-events: none;
+  font-size: 1.2rem;
+}
+.box input:focus~label {
+  top: -20px;
+  left: 0;
+  font-style: italic;
+}
+.box input:not(:valid)~label {
+  top: -20px;
+  left: 0;
+  font-style: italic;
+}
+/* End Input */
+
+
+/* Buttons */
+.filtersContainer {
+  margin-top: 2.2rem;
+  display: flex;
+}
+.allButtonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+.twoButtonsContainer {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--dark-grey-color);
+  margin: 0.2rem 1rem;
+}
+button {
+  margin-top: 0.2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+  background-color: var(--white-color);
+  cursor: pointer;
+  outline: none;
+}
+.buttonFocused {
+  color: var(--primary-color) !important;
+  border: 1px solid var(--blue-color) !important;
+  background-color: var(--blue-color) !important;
+  color: var(--white-color) !important;
+}
+.buttonLeft {
+    border-radius: 100px 0 0 100px;
+    padding: 0.2rem 0.5rem 0.5rem 0.8rem;
+}
+.buttonRight {
+    border-radius: 0 100px 100px 0;
+    padding: 0.2rem 0.8rem 0.5rem 0.5rem;
+}
+/* End Buttons */
+
+
+/* Ideas section */
+.ideasContainer {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+.ideaContainer {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--light-grey-darken-color);
+  border-radius: 10px;
+  margin: 1rem 1.5rem;
+  padding: 1rem 1rem;
+  max-width: 20%;
+  min-width: 250px;
+}
+.idCard {
+  font-size: 2rem;
+  margin-bottom: -15px;
+}
+.itemName {
+  color: var(--blue-color);
+  font-weight: bold;
+}
+/* End Ideas section */
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #5d8cbe;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  color: var(--white-color);
+  line-height: 2.3rem;
+  border-radius: 10px 10px 0 0;
+  padding: 20px 10px;
+}
+.footer a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.footer, .footer a, .footer .footerLogo {
+  color: var(--white-color);
+}
+.footer .footerLogo {
+  position: relative;
+  margin-bottom: -6px;
+  margin-right: 5px;
+}
+/* End Footer */
+
+/* Loader */
+.loaderContainer {
+  margin: 3rem 0;
+  width: 100%;
+}
+.faSpinner--container {
+  display: flex;
+}
+.faSpinner {
+  color: var(--blue-color);
+  font-size: 4rem;
+  animation: spinner 1.3s steps(9) infinite;
+  margin: auto;
+}
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+/* End Loader */
