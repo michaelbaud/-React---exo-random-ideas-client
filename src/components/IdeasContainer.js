@@ -10,8 +10,6 @@ const IdeasContainer = ({ activatedFilter, input }) => {
     const [searchArray, setSearchArray] = useState([])
     const [isLoading, setIsLoading] = useState(false)
 
-
-
     useEffect(() => {
         const getIdeas = async () => {
             setIsLoading(true)
